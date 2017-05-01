@@ -18,7 +18,7 @@ __device__ float trapezoid(float x1, float x2, float y1, float y2)
     //Calculate area of trapezoids
     if (y1 > y2) return ((y1*abs(x1-x2))) - (((y1-y2)*abs(x1-x2))/2.0f);
     if (y2 > y1) return ((y2*abs(x1-x2))) - (((y2-y1)*abs(x1-x2))/2.0f);
-    return ((y1*abs(x1-x2))); //rectangle case
+    return ((y1*abs(x1-x2))/2.0f); //rectangle case
 
 }
 
